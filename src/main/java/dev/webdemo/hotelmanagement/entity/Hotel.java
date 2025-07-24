@@ -7,7 +7,7 @@ import lombok.Data;
 public class Hotel {
     private String hotelId;
 
-    private String hotelName;
+    private String setRoomName;
 
     private boolean status = true; // Default status is true (active)
 

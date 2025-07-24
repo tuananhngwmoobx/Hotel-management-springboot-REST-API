@@ -26,7 +26,7 @@ public class HotelController {
         Hotel hotel = new Hotel();
 
         hotel.setHotelId(request.getHotelId()); // nhờ lombok
-        hotel.setHotelName(request.getHotelName()); // nhờ lombok
+        hotel.setSetRoomName(request.getHotelName()); // nhờ lombok
         hotel.setRate(request.getRate()); // nhờ lombok
 
         hotels.add(hotel);
@@ -150,7 +150,7 @@ public class HotelController {
             return null;
         }
         else {
-            hotel.setHotelName(request.getHotelName());
+            hotel.setSetRoomName(request.getGetRoomName());
             hotel.setStatus(request.isStatus());
             return hotel;
         }
