@@ -4,7 +4,8 @@ import lombok.Data;
 
 @Data
 public class UpdateHotelRequest {
-    private String getRoomName;
+
+    private String hotelName;
 
     private boolean status; // Chỉ cho update name và status nên chỉ hứng 2 giá trị này
 
