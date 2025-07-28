@@ -21,6 +21,8 @@ public class HotelController {
 
     @Autowired
     HotelService hotelService;
+
+
     // 1. Create a new hotel
     // Method POST
     // URL: /api/v1/hotels
