@@ -4,6 +4,8 @@ import dev.webdemo.hotelmanagement.dto.CreateHotelRequest;
 import dev.webdemo.hotelmanagement.dto.ResponseDTO;
 import dev.webdemo.hotelmanagement.dto.UpdateHotelRequest;
 import dev.webdemo.hotelmanagement.entity.Hotel;
+import dev.webdemo.hotelmanagement.service.HotelService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -17,6 +19,8 @@ public class HotelController {
 
     private static List<Hotel> hotels = new ArrayList<Hotel>(); // các instance của cùng 1 class sẽ sử dụng chung gtri của biến hotels
 
+    @Autowired
+    HotelService hotelService;
     // 1. Create a new hotel
     // Method POST
     // URL: /api/v1/hotels
@@ -133,7 +137,7 @@ public class HotelController {
     @GetMapping("/{hotelId}")
     public Hotel getHotelById(@PathVariable String hotelId){
 
-        return findHotelById(hotelId);
+        return hotelService.findHotelById(hotelId);
 
     }
 

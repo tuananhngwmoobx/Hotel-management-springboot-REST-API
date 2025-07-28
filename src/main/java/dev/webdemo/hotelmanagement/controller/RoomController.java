@@ -149,7 +149,8 @@ public class RoomController {
     // Method: DELETE
 
     @DeleteMapping("/{roomId}")
-    public ResponseDTO disableRoom(@PathVariable String roomId){
+    public ResponseDTO disableRoom(@PathVariable String roomId,
+                                   @RequestParam(required = false) Boolean status){
 
         Room room = findRoomById(roomId);
         if(room != null){
