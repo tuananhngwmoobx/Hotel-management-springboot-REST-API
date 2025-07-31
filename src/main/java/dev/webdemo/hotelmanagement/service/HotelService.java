@@ -13,8 +13,10 @@ import java.util.List;
 @Service
 public class HotelService {
 
+    //Ship 
     @Autowired // inject hotelRepository vao trong service
     HotelRepository hotelRepository;  // chưa implements interface mà vẫn khai báo đc giá trị này ??
+    // Created in IoC container
 
     public Hotel getHotelById(Long hotelId){
         return hotelRepository.findByHotelId(hotelId);
