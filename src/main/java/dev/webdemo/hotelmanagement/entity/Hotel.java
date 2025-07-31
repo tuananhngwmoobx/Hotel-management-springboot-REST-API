@@ -28,6 +28,10 @@ public class Hotel {
     @Transient  // nhưng attributes nào ko muốn lưu xuống DB
     private int rate;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id", referencedColumnName = "id")
+    private Address address;
+
 //    public Hotel() {
 //    }
 }
